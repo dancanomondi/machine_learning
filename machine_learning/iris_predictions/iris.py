@@ -25,7 +25,7 @@ dataset = read_csv(url, names=names)
 
 # print(dataset.shape)
 # # head
-# print(dataset.head(20))
+print(dataset.head(20))
 # descriptions
 # print(dataset.describe())
 # # class distribution

@@ -1,0 +1,29 @@
+print(dataset.describe())
+# Summarizing the dataset
+# shape
+print(dataset.shape)
+
+# peek at the data
+print(dataset.head(20))
+
+# descriptions
+print(dataset.describe())
+
+# class description
+print(dataset.groupby("class").size())
+
+
+# Data Visualization
+# dataset['class'].value_counts().plot(kind="bar", figsize=(10, 5))
+# pyplot.show()
+
+
+# label encoding: using label encoder
+label_encoder = LabelEncoder()
+for i in dataset.names:
+    dataset[i] = label_encoder.fit_transform(dataset[i])
+
+print(dataset.head(20))
+# dataset.hist()
+# pyplot.show()
+print(dataset.describe())
